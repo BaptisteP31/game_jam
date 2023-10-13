@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=3 uid="uid://bv30l337x80bd"]
+
+[ext_resource type="Texture2D" uid="uid://c6bwjrqdbixb0" path="res://Wip_fond_1.png" id="1_8un33"]
+[ext_resource type="Texture2D" uid="uid://bshh0luq35hm7" path="res://Wip_fond_3.png" id="1_a27gn"]
+[ext_resource type="Texture2D" uid="uid://djckqg0qskdes" path="res://Wip_fond_2.png" id="2_io7kl"]
+[ext_resource type="Script" path="res://Layer1Paralax.gd" id="2_kwwbf"]
+[ext_resource type="Script" path="res://Layer 2Paralax.gd" id="4_umrvb"]
+[ext_resource type="Script" path="res://Layer 3Paralax.gd" id="6_jpeh4"]
+[ext_resource type="Texture2D" uid="uid://ddbbegcyknixp" path="res://player.png" id="7_qimoy"]
+[ext_resource type="Script" path="res://CharacterBody2DMouvements.gd" id="7_yhi7o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtwyb"]
+size = Vector2(1198, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fl0f"]
+size = Vector2(37, 79)
+
+[node name="Main" type="Node2D"]
+
+[node name="Layer1" type="Sprite2D" parent="."]
+position = Vector2(38.5555, -22.25)
+scale = Vector2(0.645833, 0.645833)
+texture = ExtResource("1_a27gn")
+script = ExtResource("2_kwwbf")
+
+[node name="Layer 2" type="Sprite2D" parent="."]
+position = Vector2(37.1111, -21)
+scale = Vector2(0.638889, 0.638889)
+texture = ExtResource("2_io7kl")
+script = ExtResource("4_umrvb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Layer 3" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(30, -21)
+scale = Vector2(0.641667, 0.641667)
+texture = ExtResource("1_8un33")
+script = ExtResource("6_jpeh4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(7, 286)
+shape = SubResource("RectangleShape2D_mtwyb")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-413, 123)
+script = ExtResource("7_yhi7o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-34.5, 53.5)
+shape = SubResource("RectangleShape2D_0fl0f")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-35, 54)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("7_qimoy")
