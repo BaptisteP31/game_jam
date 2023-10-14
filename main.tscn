@@ -1,18 +1,25 @@
-[gd_scene load_steps=33 format=3 uid="uid://d2jssa31tomaj"]
+[gd_scene load_steps=55 format=3 uid="uid://d2jssa31tomaj"]
 
-[ext_resource type="Texture2D" uid="uid://1dkoywr1utq1" path="res://Fond_4.png" id="1_bin2x"]
 [ext_resource type="Script" path="res://main.gd" id="1_f8ih8"]
 [ext_resource type="Script" path="res://Fond3.gd" id="2_bx8pk"]
+[ext_resource type="Texture2D" uid="uid://cgjvgps2ljqq4" path="res://Fond_final_6.png" id="3_d23hr"]
+[ext_resource type="Texture2D" uid="uid://d3y3by65tcpqb" path="res://Fond_final_7.png" id="3_uxrxk"]
 [ext_resource type="Script" path="res://Fond3-1.gd" id="3_wgnoc"]
 [ext_resource type="Script" path="res://Fond3-2.gd" id="4_nb4us"]
 [ext_resource type="Script" path="res://Fond2.gd" id="5_rweph"]
 [ext_resource type="Script" path="res://Fond2-1.gd" id="6_fg1fu"]
-[ext_resource type="Texture2D" uid="uid://d14euh6vobigf" path="res://foregroundlong.png" id="6_ldvjn"]
+[ext_resource type="Script" path="res://Fond4.gd" id="6_us0yj"]
+[ext_resource type="Script" path="res://Fond4-1.gd" id="7_q6hva"]
 [ext_resource type="Script" path="res://Fond2-2.gd" id="7_uukri"]
+[ext_resource type="Script" path="res://Fond4-2.gd" id="8_b5480"]
 [ext_resource type="Script" path="res://pont_bas.gd" id="10_ikedf"]
+[ext_resource type="Script" path="res://Fond5.gd" id="10_vab05"]
 [ext_resource type="Texture2D" uid="uid://blv32dp26jcbm" path="res://pont_1920.png" id="11_0jors"]
+[ext_resource type="Script" path="res://Fond5-1.gd" id="11_1ynwk"]
+[ext_resource type="Texture2D" uid="uid://dy2rlepemyoki" path="res://Fond_final_4.png" id="11_8frm5"]
 [ext_resource type="Texture2D" uid="uid://t5575ne1tnsx" path="res://pont_haut_1920.png" id="11_n8mey"]
 [ext_resource type="Texture2D" uid="uid://dd53cpfgrg7vs" path="res://playeranim/Illustration_sans_titre-1.png" id="11_w75md"]
+[ext_resource type="Script" path="res://Fond5-2.gd" id="12_ckjjf"]
 [ext_resource type="Script" path="res://Pont_bas-1.gd" id="12_pnqhd"]
 [ext_resource type="Texture2D" uid="uid://q56vlbmf7d8m" path="res://playeranim/Illustration_sans_titre-2.png" id="12_t038m"]
 [ext_resource type="Script" path="res://Pont_bas-2.gd" id="13_7hhes"]
@@ -26,8 +33,25 @@
 [ext_resource type="Texture2D" uid="uid://c1m16a67qbtht" path="res://Obstacle2.png" id="17_hy6pn"]
 [ext_resource type="Script" path="res://obstace_sprite.gd" id="17_yt6fo"]
 [ext_resource type="Texture2D" uid="uid://c7t4fsbvd1f3x" path="res://playeranim/Illustration_sans_titre-8.png" id="18_4bw3q"]
+[ext_resource type="Texture2D" uid="uid://bc1jebumficmp" path="res://teleport_anim/Illustration_sans_titre-1.png" id="19_m7skr"]
 [ext_resource type="Script" path="res://obstacle_collision.gd" id="19_rr7bs"]
+[ext_resource type="Texture2D" uid="uid://bqk00lnw0i4wy" path="res://teleport_anim/Illustration_sans_titre-2.png" id="20_3465s"]
 [ext_resource type="PackedScene" uid="uid://17qeocldromy" path="res://Collectible/feuFollet.tscn" id="21_6lhh8"]
+[ext_resource type="Texture2D" uid="uid://ocbn3m5mbtgc" path="res://teleport_anim/Illustration_sans_titre-3.png" id="21_wiswk"]
+[ext_resource type="Texture2D" uid="uid://mtudw7hwsgkl" path="res://teleport_anim/Illustration_sans_titre-4.png" id="22_rcj4w"]
+[ext_resource type="Texture2D" uid="uid://py0v0uavsqlm" path="res://teleport_anim/Illustration_sans_titre-5.png" id="23_kdabx"]
+[ext_resource type="Texture2D" uid="uid://wxb5bbe1ys4" path="res://teleport_anim/Illustration_sans_titre-6.png" id="24_ygs6y"]
+[ext_resource type="Texture2D" uid="uid://bam0godqjpa4s" path="res://teleport_anim/Illustration_sans_titre-7.png" id="25_45co2"]
+[ext_resource type="Texture2D" uid="uid://bb7a2o740miah" path="res://foregroundlongV2_fix.png" id="26_1four"]
+[ext_resource type="Texture2D" uid="uid://bjayadyvdkrpo" path="res://teleport_anim/Illustration_sans_titre-8.png" id="26_qlc1w"]
+[ext_resource type="Texture2D" uid="uid://dexpfkf4f1tyb" path="res://teleport_anim/Illustration_sans_titre-9.png" id="27_yd23b"]
+[ext_resource type="Texture2D" uid="uid://ddagul4okrx3f" path="res://foregroundlongV2iteration_fix.png" id="28_22jw0"]
+[ext_resource type="AudioStream" uid="uid://ktprxhffp3mq" path="res://Green Lights.wav" id="39_f7nhr"]
+
+[sub_resource type="Environment" id="Environment_syqgg"]
+background_mode = 3
+tonemap_mode = 3
+tonemap_white = 5.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gkvc1"]
 size = Vector2(1920, 18)
@@ -65,13 +89,61 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("19_m7skr")
+}, {
+"duration": 0.5,
+"texture": ExtResource("20_3465s")
+}, {
+"duration": 0.5,
+"texture": ExtResource("21_wiswk")
+}, {
+"duration": 0.5,
+"texture": ExtResource("22_rcj4w")
+}, {
+"duration": 0.5,
+"texture": ExtResource("23_kdabx")
+}, {
+"duration": 0.5,
+"texture": ExtResource("24_ygs6y")
+}, {
+"duration": 0.5,
+"texture": ExtResource("25_45co2")
+}, {
+"duration": 0.5,
+"texture": ExtResource("26_qlc1w")
+}, {
+"duration": 0.5,
+"texture": ExtResource("27_yd23b")
+}],
+"loop": true,
+"name": &"teleport",
+"speed": 5.0
 }]
+
+[sub_resource type="Gradient" id="Gradient_ltkcw"]
+offsets = PackedFloat32Array(0, 0.763314)
+colors = PackedColorArray(0.5, 0.958333, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_68bsy"]
+gradient = SubResource("Gradient_ltkcw")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tmi10"]
 size = Vector2(973, 314)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_f8ih8")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_syqgg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -80,15 +152,43 @@ anchor_mode = 0
 script = ExtResource("2_bx8pk")
 
 [node name="Fond3-1" type="Sprite2D" parent="Fond3"]
-texture = ExtResource("1_bin2x")
+texture = ExtResource("3_uxrxk")
 centered = false
 script = ExtResource("3_wgnoc")
 
 [node name="Fond3-2" type="Sprite2D" parent="Fond3"]
 position = Vector2(9600, 0)
-texture = ExtResource("1_bin2x")
+texture = ExtResource("3_uxrxk")
 centered = false
 script = ExtResource("4_nb4us")
+
+[node name="Fond4" type="Node2D" parent="."]
+script = ExtResource("6_us0yj")
+
+[node name="Fond4-1" type="Sprite2D" parent="Fond4"]
+texture = ExtResource("3_d23hr")
+centered = false
+script = ExtResource("7_q6hva")
+
+[node name="Fond4-2" type="Sprite2D" parent="Fond4"]
+position = Vector2(9600, 0)
+texture = ExtResource("3_d23hr")
+centered = false
+script = ExtResource("8_b5480")
+
+[node name="Fond5" type="Node2D" parent="."]
+script = ExtResource("10_vab05")
+
+[node name="Fond5-1" type="Sprite2D" parent="Fond5"]
+texture = ExtResource("11_8frm5")
+centered = false
+script = ExtResource("11_1ynwk")
+
+[node name="Fond5-2" type="Sprite2D" parent="Fond5"]
+position = Vector2(9600, 0)
+texture = ExtResource("11_8frm5")
+centered = false
+script = ExtResource("12_ckjjf")
 
 [node name="Pont Haut" type="StaticBody2D" parent="."]
 
@@ -112,7 +212,7 @@ position = Vector2(968, 328)
 shape = SubResource("RectangleShape2D_gkvc1")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(-48, 0)
+position = Vector2(280, 0)
 script = ExtResource("14_y3nea")
 
 [node name="player_collision" type="CollisionShape2D" parent="Player"]
@@ -121,15 +221,42 @@ shape = SubResource("RectangleShape2D_msrgw")
 
 [node name="Timer" type="Timer" parent="Player"]
 process_callback = 0
+wait_time = 0.2
 autostart = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="PlayerAnim" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(147.5, 589.5)
 scale = Vector2(0.0834961, 0.0834961)
 sprite_frames = SubResource("SpriteFrames_47dm2")
+animation = &"teleport"
 autoplay = "default"
-frame_progress = 0.681719
 speed_scale = 1.25
+
+[node name="teleport_anim_timer" type="Timer" parent="Player"]
+wait_time = 0.28
+one_shot = true
+
+[node name="teleport_anim_timer_down" type="Timer" parent="Player"]
+wait_time = 0.28
+one_shot = true
+
+[node name="back_to_default_anim" type="Timer" parent="Player"]
+wait_time = 0.3
+one_shot = true
+
+[node name="Light" type="PointLight2D" parent="Player"]
+position = Vector2(144, 576)
+energy = 1.14
+blend_mode = 2
+range_z_min = -1
+shadow_enabled = true
+shadow_filter = 1
+texture = SubResource("GradientTexture2D_68bsy")
+texture_scale = 10.0
+
+[node name="light_reduce_timer" type="Timer" parent="Player"]
+wait_time = 0.2
+autostart = true
 
 [node name="feuFolletHaut" type="Node2D" parent="."]
 
@@ -175,17 +302,31 @@ shape = SubResource("RectangleShape2D_gkvc1")
 position = Vector2(528, 591)
 
 [node name="Fond2" type="Node2D" parent="."]
+visible = false
 script = ExtResource("5_rweph")
 
 [node name="Fond2-1" type="Sprite2D" parent="Fond2"]
-texture = ExtResource("6_ldvjn")
+texture = ExtResource("26_1four")
 centered = false
 script = ExtResource("6_fg1fu")
 
 [node name="Fond2-2" type="Sprite2D" parent="Fond2"]
 position = Vector2(9600, 0)
-texture = ExtResource("6_ldvjn")
+texture = ExtResource("28_22jw0")
 centered = false
 script = ExtResource("7_uukri")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("39_f7nhr")
+autoplay = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.388235, 0.388235, 0.388235, 1)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
+[connection signal="timeout" from="Player/teleport_anim_timer" to="Player" method="_on_teleport_anim_timer_timeout"]
+[connection signal="timeout" from="Player/teleport_anim_timer_down" to="Player" method="_on_teleport_anim_timer_down_timeout"]
+[connection signal="timeout" from="Player/back_to_default_anim" to="Player" method="_on_back_to_default_anim_timeout"]
+[connection signal="timeout" from="Player/light_reduce_timer" to="Player" method="_on_light_reduce_timer_timeout"]

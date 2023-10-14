@@ -47,20 +47,60 @@ func _physics_process(delta):
 	
 
 func _input(event):
+	
+	var animNode = get_node("PlayerAnim")
+	
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		pass
 
 	if isForeground and Input.is_action_just_pressed("Teleport_up"):
-		position.y = -200
-		scale.y = 0.8
-		scale.x = 0.8
+		animNode.play("teleport", 2.5)
 		isForeground = false
+		
+		var teleport_timer = get_node("teleport_anim_timer")
+		teleport_timer.start()
 
 	elif not isForeground and Input.is_action_just_pressed("Teleport_up"):
-
-		position.y = 0
-		scale.y = 1
-		scale.x = 1
+		animNode.play("teleport", 2.5)
 		isForeground = true
+		
+		var teleport_timer_down = get_node("teleport_anim_timer_down")
+		teleport_timer_down.start()
 
 func _on_timer_timeout():
-	Global.health -= 5
+	Global.health -= 1
 	print(Global.health)
+
+
+func _on_teleport_anim_timer_timeout():
+	var animNode = get_node("PlayerAnim")
+	animNode.play("teleport", -2.5)
+	
+	position.y = -200
+	scale.y = 0.8
+	scale.x = 0.8
+	
+	var timer_de_trop = get_node("back_to_default_anim")
+	timer_de_trop.start()
+	
+
+func _on_teleport_anim_timer_down_timeout():
+	var animNode = get_node("PlayerAnim")
+	animNode.play("teleport", -2.5)
+	
+	position.y = 0
+	scale.y = 1
+	scale.x = 1
+	
+	var timer_de_trop = get_node("back_to_default_anim")
+	timer_de_trop.start()
+	
+
+func _on_back_to_default_anim_timeout():
+	var animNode = get_node("PlayerAnim")
+	animNode.play("default")
+
+
+func _on_light_reduce_timer_timeout():
+	var light = get_node("Light")
+	light.scale =Vector2(float(Global.health)/100,float(Global.health)/100)

@@ -9,3 +9,7 @@ func _on_body_entered(body):
 		Global.isPicking = true
 		
 		queue_free()
+
+
+func _process(delta):
+	position = Vector2(position[0]- 3, position[1])

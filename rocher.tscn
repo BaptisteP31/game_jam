@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs87r1nmgs0cb"]
+
+[ext_resource type="Script" path="res://RocherComportement.gd" id="1_duy8n"]
+[ext_resource type="Texture2D" uid="uid://dukmvs34j4a5m" path="res://caillou piti.png" id="2_ydtjm"]
+
+[node name="Rocher" type="Node2D"]
+z_index = 10
+script = ExtResource("1_duy8n")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(2000, 568)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(60.5, 56.75)
+scale = Vector2(0.320225, 0.303681)
+texture = ExtResource("2_ydtjm")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(64, 40.0001)
+scale = Vector2(0.36111, 0.352564)
+polygon = PackedVector2Array(-88.6152, 104.945, -74.769, 116.291, 60.9233, 113.454, 69.231, 99.2726, 63.6924, 87.9271, 52.6157, 76.5817, 55.3848, 59.5635, 52.6157, 48.218, 30.4619, 31.1998, 24.9233, 11.3453, 8.30811, -8.50916, -13.8462, -19.8546, -33.2305, -19.8546, -49.8462, 5.67261, -66.4614, 48.218)

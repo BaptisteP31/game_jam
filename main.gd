@@ -3,11 +3,21 @@ extends Node2D
 var viewWidth = ProjectSettings.get_setting("display/window/size/viewport_width")
 var viewHeight = ProjectSettings.get_setting("display/window/size/viewport_height")
 
-# Called when the node enters the scene tree for the first time.
+#preload tout les obstacles
+var obstacles = []
+var rocher = preload("res://rocher.tscn")
+
+var mainAnchor = Vector2(147, 589)
+
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
 	pass
+
+func _process(delta):
+	#append tout les obstacles dans le tableau
+	obstacles.append(rocher)
+
+func _on_timer_timeout():
+	var nb_alea = randi_range(0, obstacles.size()-1)
+	var new_obstacle = obstacles[nb_alea].instantiate()
+	
+	add_child(new_obstacle)
