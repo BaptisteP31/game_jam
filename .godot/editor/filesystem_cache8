@@ -1,13 +1,18 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697267466
-animated_sprite_2d.tscn::PackedScene::3919728061151893249::1697265881::0::1::::<><>::uid://c6bwjrqdbixb0::::res://Wip_fond_1.png<>uid://bshh0luq35hm7::::res://Wip_fond_3.png<>uid://djckqg0qskdes::::res://Wip_fond_2.png<>res://Layer1Paralax.gd<>res://Layer 2Paralax.gd<>res://Layer 3Paralax.gd<>uid://ddbbegcyknixp::::res://player.png<>res://CharacterBody2DMouvements.gd
+::res://::1697271029
+animated_sprite_2d.tscn::PackedScene::3919728061151893249::1697270581::0::1::::<><>::uid://bshh0luq35hm7::::res://Wip_fond_3.png<>uid://djckqg0qskdes::::res://Wip_fond_2.png<>res://Layer1Paralax.gd<>res://Layer 2Paralax.gd<>uid://b1slhp6wtymo7::::res://Fond_3.png<>res://Layer 3Paralax.gd<>res://StaticBody2D.gd<>uid://ddbbegcyknixp::::res://player.png<>res://CharacterBody2DMouvements.gd
 CharacterBody2DMouvements.gd::GDScript::-1::1697239899::0::1::::<>CharacterBody2D<>::
+Fond_3.png::CompressedTexture2D::4249170642097900828::1697269136::1697269138::1::::<><>::
 icon.svg::CompressedTexture2D::7016658401508957913::1697220766::1697220785::1::::<><>::
-Layer1Paralax.gd::GDScript::-1::1697240094::0::1::::<>Sprite2D<>::
-Layer 2Paralax.gd::GDScript::-1::1697240114::0::1::::<>Sprite2D<>::
-Layer 3Paralax.gd::GDScript::-1::1697240114::0::1::::<>Sprite2D<>::
+Layer1Paralax.gd::GDScript::-1::1697268740::0::1::::<>Sprite2D<>::
+Layer 2Paralax.gd::GDScript::-1::1697268740::0::1::::<>Sprite2D<>::
+Layer 3Paralax.gd::GDScript::-1::1697270581::0::1::::<>Sprite2D<>::
 player.png::CompressedTexture2D::7371961139249890373::1697265881::1697267467::1::::<><>::
 README.md::TextFile::-1::1697221278::0::1::::<><>::
+CollisionShape2D.gd::GDScript::-1::1697270687::0::1::::<>CollisionShape2D<>::
+CollisionPolygon2D.gd::GDScript::-1::1697270730::0::1::::<>CollisionPolygon2D<>::
+StaticBody2D.gd::GDScript::-1::1697270581::0::1::::<>StaticBody2D<>::
+triangle.png::CompressedTexture2D::5878792443591834440::1697271029::1697271029::1::::<><>::
 Wip_fond_1.png::CompressedTexture2D::6952112661657078855::1697238721::1697238722::1::::<><>::
 Wip_fond_2.png::CompressedTexture2D::7795726496471485910::1697238823::1697238824::1::::<><>::
 Wip_fond_3.png::CompressedTexture2D::3664740786671601796::1697238863::1697238864::1::::<><>::

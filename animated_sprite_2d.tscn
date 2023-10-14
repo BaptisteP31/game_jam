@@ -1,25 +1,40 @@
-[gd_scene load_steps=11 format=3 uid="uid://bv30l337x80bd"]
+[gd_scene load_steps=16 format=3 uid="uid://bv30l337x80bd"]
 
-[ext_resource type="Texture2D" uid="uid://c6bwjrqdbixb0" path="res://Wip_fond_1.png" id="1_8un33"]
 [ext_resource type="Texture2D" uid="uid://bshh0luq35hm7" path="res://Wip_fond_3.png" id="1_a27gn"]
 [ext_resource type="Texture2D" uid="uid://djckqg0qskdes" path="res://Wip_fond_2.png" id="2_io7kl"]
 [ext_resource type="Script" path="res://Layer1Paralax.gd" id="2_kwwbf"]
 [ext_resource type="Script" path="res://Layer 2Paralax.gd" id="4_umrvb"]
+[ext_resource type="Texture2D" uid="uid://b1slhp6wtymo7" path="res://Fond_3.png" id="5_0123a"]
 [ext_resource type="Script" path="res://Layer 3Paralax.gd" id="6_jpeh4"]
+[ext_resource type="Script" path="res://StaticBody2D.gd" id="7_oifbd"]
 [ext_resource type="Texture2D" uid="uid://ddbbegcyknixp" path="res://player.png" id="7_qimoy"]
 [ext_resource type="Script" path="res://CharacterBody2DMouvements.gd" id="7_yhi7o"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="9_wa0q6"]
+[ext_resource type="Texture2D" uid="uid://cp0y38wkm7rlo" path="res://triangle.png" id="9_xobce"]
+[ext_resource type="Script" path="res://CollisionPolygon2D.gd" id="10_rcuhe"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtwyb"]
-size = Vector2(1211, 143)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw2l2"]
+size = Vector2(5799.5, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtrk2"]
+size = Vector2(5774, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fl0f"]
 size = Vector2(41, 82.75)
 
 [node name="Main" type="Node2D"]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="Layer1" type="Sprite2D" parent="."]
 position = Vector2(-2.22211, 1.24992)
 scale = Vector2(0.603356, 0.602315)
+texture = ExtResource("1_a27gn")
+script = ExtResource("2_kwwbf")
+
+[node name="Layer1-2" type="Sprite2D" parent="."]
+position = Vector2(1151, 2)
+scale = Vector2(0.59827, 0.596206)
 texture = ExtResource("1_a27gn")
 script = ExtResource("2_kwwbf")
 
@@ -29,24 +44,56 @@ scale = Vector2(0.599595, 0.597222)
 texture = ExtResource("2_io7kl")
 script = ExtResource("4_umrvb")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Layer 2-2" type="Sprite2D" parent="."]
+position = Vector2(1153, 3)
+scale = Vector2(0.600674, 0.59593)
+texture = ExtResource("2_io7kl")
+script = ExtResource("4_umrvb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="Layer 3" type="Sprite2D" parent="StaticBody2D4"]
+position = Vector2(2324, 1.43051e-06)
+scale = Vector2(0.604167, 0.599074)
+texture = ExtResource("5_0123a")
+script = ExtResource("6_jpeh4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(2324.25, 308.5)
+shape = SubResource("RectangleShape2D_mw2l2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 modulate = Color(0.101961, 1, 1, 1)
 top_level = true
 light_mask = 524288
 visibility_layer = 524288
-position = Vector2(7.5, 253.5)
-shape = SubResource("RectangleShape2D_mtwyb")
+position = Vector2(8110, 308.5)
+shape = SubResource("RectangleShape2D_vtrk2")
 one_way_collision_margin = 0.0
 debug_color = Color(0.572549, 0.529412, 0.47451, 0.419608)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-469, 68)
-scale = Vector2(0.997852, 1.45644)
-polygon = PackedVector2Array(108.613, 12.858, -44.0947, 79.6463, 108.232, 79.6463, 342.595, 80.1454)
+[node name="Layer 3-2" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(8110, 4)
+scale = Vector2(0.601411, 0.592598)
+texture = ExtResource("5_0123a")
+script = ExtResource("6_jpeh4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("7_oifbd")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-255, 259)
+scale = Vector2(0.209938, 0.209938)
+texture = ExtResource("9_xobce")
+script = ExtResource("9_wa0q6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-461, 178)
+scale = Vector2(0.997852, 1.45644)
+polygon = PackedVector2Array(305.657, 24.7178, 97.2088, 81.7061, 307.661, 79.6463)
+script = ExtResource("10_rcuhe")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(-427, 117)
@@ -61,26 +108,4 @@ position = Vector2(1, -51)
 scale = Vector2(0.079, 0.08)
 texture = ExtResource("7_qimoy")
 
-[node name="Layer1-2" type="Sprite2D" parent="."]
-position = Vector2(1151, 2)
-scale = Vector2(0.59827, 0.596206)
-texture = ExtResource("1_a27gn")
-script = ExtResource("2_kwwbf")
-
-[node name="Layer 2-2" type="Sprite2D" parent="."]
-position = Vector2(1153, 3)
-scale = Vector2(0.600674, 0.59593)
-texture = ExtResource("2_io7kl")
-script = ExtResource("4_umrvb")
-
-[node name="Layer 3" type="Sprite2D" parent="."]
-position = Vector2(-4.00013, 0.500024)
-scale = Vector2(0.604167, 0.599074)
-texture = ExtResource("1_8un33")
-script = ExtResource("6_jpeh4")
-
-[node name="Layer 3-2" type="Sprite2D" parent="."]
-position = Vector2(1153.35, 3.99726)
-scale = Vector2(0.601411, 0.592598)
-texture = ExtResource("1_8un33")
-script = ExtResource("6_jpeh4")
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
