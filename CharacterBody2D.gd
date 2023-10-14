@@ -42,9 +42,9 @@ func _physics_process(delta):
 		get_tree().quit()
 		
 	if Global.isPicking:
-		print("picked")
 		Global.health += 10
 		Global.isPicking = false
+		Global.currentFeu -= 1
 		
 	if Global.health == 0:
 		get_tree().quit()
@@ -75,7 +75,6 @@ func _input(event):
 
 func _on_timer_timeout():
 	Global.health -= 1
-	print(Global.health)
 
 
 func _on_teleport_anim_timer_timeout():

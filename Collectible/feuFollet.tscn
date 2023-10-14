@@ -1,13 +1,41 @@
-[gd_scene load_steps=5 format=3 uid="uid://17qeocldromy"]
+[gd_scene load_steps=14 format=3 uid="uid://17qeocldromy"]
 
 [ext_resource type="Script" path="res://Collectible/feuFollet.gd" id="1_1h71s"]
-[ext_resource type="Texture2D" uid="uid://cpkiwutoi17xv" path="res://flame.png" id="1_xwbdg"]
+[ext_resource type="Texture2D" uid="uid://bymfydp1lju3s" path="res://Feufol/feufol1.png" id="2_krmiu"]
+[ext_resource type="Texture2D" uid="uid://vlw83e885kmj" path="res://Feufol/feufol2.png" id="3_mwmat"]
+[ext_resource type="Texture2D" uid="uid://bv8trgalos4xn" path="res://Feufol/feufol3.png" id="4_p6n8h"]
+[ext_resource type="Texture2D" uid="uid://cwxk1hkday8kw" path="res://Feufol/feufol4.png" id="5_bhe11"]
+[ext_resource type="Texture2D" uid="uid://b4fhanpbgira7" path="res://Feufol/feufol5.png" id="6_he1xg"]
+[ext_resource type="Texture2D" uid="uid://b575ipsrsafhq" path="res://Feufol/feufol6.png" id="7_o4p1w"]
+[ext_resource type="Texture2D" uid="uid://dnxlxo58sul4w" path="res://Feufol/feufol7.png" id="8_cg3pd"]
+[ext_resource type="Texture2D" uid="uid://biys7job3t14g" path="res://Feufol/feufol8.png" id="9_c1alf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_emmhg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_xwbdg")
+"texture": ExtResource("2_krmiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mwmat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_p6n8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bhe11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_he1xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_o4p1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cg3pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_c1alf")
 }],
 "loop": true,
 "name": &"default",
@@ -18,14 +46,31 @@ animations = [{
 radius = 16.0
 height = 48.0
 
+[sub_resource type="Gradient" id="Gradient_8f2rs"]
+offsets = PackedFloat32Array(0, 0.656805)
+colors = PackedColorArray(7.5084e-06, 0.721811, 0.876453, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xyy7l"]
+gradient = SubResource("Gradient_8f2rs")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_1h71s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.08, 0.08)
 sprite_frames = SubResource("SpriteFrames_emmhg")
+autoplay = "default"
+frame_progress = 0.913409
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
 shape = SubResource("CapsuleShape2D_a2r0n")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, 16)
+texture = SubResource("GradientTexture2D_xyy7l")
+texture_scale = 2.0
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

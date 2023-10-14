@@ -1,8 +1,7 @@
-[gd_scene load_steps=63 format=3 uid="uid://d2jssa31tomaj"]
+[gd_scene load_steps=57 format=3 uid="uid://d2jssa31tomaj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_f8ih8"]
 [ext_resource type="Script" path="res://Fond3.gd" id="2_bx8pk"]
-[ext_resource type="Script" path="res://Obstacles_node.gd" id="2_csumo"]
 [ext_resource type="Texture2D" uid="uid://bm40qvba7bty" path="res://Fond_final_8.png" id="2_uls60"]
 [ext_resource type="Texture2D" uid="uid://cgjvgps2ljqq4" path="res://Fond_final_6.png" id="3_d23hr"]
 [ext_resource type="Texture2D" uid="uid://d3y3by65tcpqb" path="res://Fond_final_7.png" id="3_uxrxk"]
@@ -16,54 +15,51 @@
 [ext_resource type="Script" path="res://Fond4-2.gd" id="8_b5480"]
 [ext_resource type="Script" path="res://pont_bas.gd" id="10_ikedf"]
 [ext_resource type="Script" path="res://Fond5.gd" id="10_vab05"]
-[ext_resource type="Texture2D" uid="uid://blv32dp26jcbm" path="res://pont_1920.png" id="11_0jors"]
 [ext_resource type="Script" path="res://Fond5-1.gd" id="11_1ynwk"]
 [ext_resource type="Texture2D" uid="uid://dy2rlepemyoki" path="res://Fond_final_4.png" id="11_8frm5"]
-[ext_resource type="Texture2D" uid="uid://t5575ne1tnsx" path="res://pont_haut_1920.png" id="11_n8mey"]
-[ext_resource type="Texture2D" uid="uid://dd53cpfgrg7vs" path="res://playeranim/Illustration_sans_titre-1.png" id="11_w75md"]
 [ext_resource type="Script" path="res://Fond5-2.gd" id="12_ckjjf"]
-[ext_resource type="Script" path="res://Pont_bas-1.gd" id="12_pnqhd"]
-[ext_resource type="Texture2D" uid="uid://q56vlbmf7d8m" path="res://playeranim/Illustration_sans_titre-2.png" id="12_t038m"]
-[ext_resource type="Script" path="res://Pont_bas-2.gd" id="13_7hhes"]
-[ext_resource type="Texture2D" uid="uid://bxbvc8heuh5fj" path="res://playeranim/Illustration_sans_titre-3.png" id="13_v2cdt"]
-[ext_resource type="Texture2D" uid="uid://dpj8hu6j27m73" path="res://playeranim/Illustration_sans_titre-4.png" id="14_kug31"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="14_y3nea"]
-[ext_resource type="Texture2D" uid="uid://d1l08a30t6xvj" path="res://playeranim/Illustration_sans_titre-5.png" id="15_lrjbh"]
-[ext_resource type="Texture2D" uid="uid://btr5vl00xiih1" path="res://playeranim/Illustration_sans_titre-6.png" id="16_64bxu"]
-[ext_resource type="Texture2D" uid="uid://dt8d6skk6cf1p" path="res://playeranim/Illustration_sans_titre-7.png" id="17_6okv0"]
-[ext_resource type="Texture2D" uid="uid://c7t4fsbvd1f3x" path="res://playeranim/Illustration_sans_titre-8.png" id="18_4bw3q"]
 [ext_resource type="Texture2D" uid="uid://bc1jebumficmp" path="res://teleport_anim/Illustration_sans_titre-1.png" id="19_m7skr"]
 [ext_resource type="Texture2D" uid="uid://bqk00lnw0i4wy" path="res://teleport_anim/Illustration_sans_titre-2.png" id="20_3465s"]
-[ext_resource type="PackedScene" uid="uid://17qeocldromy" path="res://Collectible/feuFollet.tscn" id="21_6lhh8"]
 [ext_resource type="Texture2D" uid="uid://ocbn3m5mbtgc" path="res://teleport_anim/Illustration_sans_titre-3.png" id="21_wiswk"]
 [ext_resource type="Texture2D" uid="uid://mtudw7hwsgkl" path="res://teleport_anim/Illustration_sans_titre-4.png" id="22_rcj4w"]
 [ext_resource type="Texture2D" uid="uid://py0v0uavsqlm" path="res://teleport_anim/Illustration_sans_titre-5.png" id="23_kdabx"]
 [ext_resource type="Texture2D" uid="uid://wxb5bbe1ys4" path="res://teleport_anim/Illustration_sans_titre-6.png" id="24_ygs6y"]
 [ext_resource type="Texture2D" uid="uid://bam0godqjpa4s" path="res://teleport_anim/Illustration_sans_titre-7.png" id="25_45co2"]
+[ext_resource type="Texture2D" uid="uid://xyyf5a3wk15h" path="res://runFinal/Illustration_sans_titre-8.png" id="25_sjafs"]
+[ext_resource type="Texture2D" uid="uid://wr855b8xqwtq" path="res://runFinal/Illustration_sans_titre-9.png" id="26_10mud"]
 [ext_resource type="Texture2D" uid="uid://bjayadyvdkrpo" path="res://teleport_anim/Illustration_sans_titre-8.png" id="26_qlc1w"]
+[ext_resource type="Texture2D" uid="uid://ckjjp3tqtdlbv" path="res://sautFinal/Illustration_sans_titre-1.png" id="27_brqxo"]
+[ext_resource type="Texture2D" uid="uid://dh8e27b40qta1" path="res://runFinal/Illustration_sans_titre-10.png" id="27_t2d1k"]
 [ext_resource type="Texture2D" uid="uid://dexpfkf4f1tyb" path="res://teleport_anim/Illustration_sans_titre-9.png" id="27_yd23b"]
-[ext_resource type="Texture2D" uid="uid://bfuxo0dwkgsw7" path="res://anim_saut/Illustration_sans_titre-1.png" id="29_2sjg1"]
-[ext_resource type="Texture2D" uid="uid://d210huu8bvq76" path="res://anim_saut/Illustration_sans_titre-2.png" id="30_1v0kl"]
-[ext_resource type="Texture2D" uid="uid://cfrrvjg32wutx" path="res://anim_saut/Illustration_sans_titre-3.png" id="31_t77y6"]
-[ext_resource type="Texture2D" uid="uid://bn6mo40ulqch5" path="res://anim_saut/Illustration_sans_titre-4.png" id="32_achul"]
-[ext_resource type="Texture2D" uid="uid://dgbxtew68juha" path="res://anim_saut/Illustration_sans_titre-5.png" id="33_si6ei"]
-[ext_resource type="Texture2D" uid="uid://dthgoob02n2j4" path="res://anim_saut/Illustration_sans_titre-6.png" id="34_bw2yn"]
-[ext_resource type="Texture2D" uid="uid://bjvcibjddxgei" path="res://anim_saut/Illustration_sans_titre-7.png" id="35_hney7"]
-[ext_resource type="Texture2D" uid="uid://box15ifh6oc55" path="res://anim_saut/Illustration_sans_titre-8.png" id="36_2cx4m"]
-[ext_resource type="Texture2D" uid="uid://mrp7qac0lk7x" path="res://anim_saut/Illustration_sans_titre-9.png" id="37_k1ftm"]
-[ext_resource type="Texture2D" uid="uid://b7rl6ynrbf0ke" path="res://anim_saut/Illustration_sans_titre-10.png" id="38_acrgq"]
+[ext_resource type="Texture2D" uid="uid://d11c06a25emin" path="res://sautFinal/Illustration_sans_titre-2.png" id="28_68fav"]
+[ext_resource type="Texture2D" uid="uid://y5jvb2k5cl11" path="res://runFinal/Illustration_sans_titre-11.png" id="28_dge1n"]
+[ext_resource type="Texture2D" uid="uid://dwnjvvl1i63mc" path="res://sautFinal/Illustration_sans_titre-3.png" id="29_l3cfs"]
+[ext_resource type="Texture2D" uid="uid://pdlt7easpasx" path="res://runFinal/Illustration_sans_titre-12.png" id="29_nukyw"]
+[ext_resource type="Texture2D" uid="uid://4gbj26ar2lh" path="res://sautFinal/Illustration_sans_titre-4.png" id="30_j61h5"]
+[ext_resource type="Texture2D" uid="uid://cimmtneloclrd" path="res://runFinal/Illustration_sans_titre-13.png" id="30_u7okg"]
+[ext_resource type="Texture2D" uid="uid://7dlwwc75v3l4" path="res://runFinal/Illustration_sans_titre-14.png" id="31_6vl7l"]
+[ext_resource type="Texture2D" uid="uid://c3xwo6pf32imq" path="res://sautFinal/Illustration_sans_titre-5.png" id="31_lho4n"]
+[ext_resource type="Texture2D" uid="uid://do7s7vv1ihulq" path="res://runFinal/Illustration_sans_titre-15.png" id="32_27ec1"]
+[ext_resource type="Texture2D" uid="uid://dtjalumo7hr54" path="res://sautFinal/Illustration_sans_titre-6.png" id="32_x8p00"]
+[ext_resource type="Texture2D" uid="uid://cfanhycmc6mr6" path="res://sautFinal/Illustration_sans_titre-7.png" id="33_328kf"]
+[ext_resource type="Texture2D" uid="uid://bckld55ewmwk5" path="res://runFinal/Illustration_sans_titre-16.png" id="33_k1spa"]
 [ext_resource type="AudioStream" uid="uid://ktprxhffp3mq" path="res://Green Lights.wav" id="39_f7nhr"]
+[ext_resource type="Script" path="res://feuFolletHaut.gd" id="43_2klt8"]
 [ext_resource type="Script" path="res://feuFolletBas.gd" id="43_i7b5y"]
 [ext_resource type="Texture2D" uid="uid://chg57hsfkjvmh" path="res://premierplanfinal.png" id="46_quppi"]
 [ext_resource type="Texture2D" uid="uid://bdc01jlllear" path="res://premierplanfinal2.png" id="48_njlqr"]
 
+[sub_resource type="Gradient" id="Gradient_7ayun"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3pde0"]
+gradient = SubResource("Gradient_7ayun")
+
 [sub_resource type="Environment" id="Environment_syqgg"]
 background_mode = 3
-tonemap_mode = 3
-tonemap_white = 5.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkvc1"]
-size = Vector2(1920, 18)
+fog_light_color = Color(0, 0, 0, 1)
+fog_light_energy = 2.41
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msrgw"]
 size = Vector2(69, 128)
@@ -71,105 +67,99 @@ size = Vector2(69, 128)
 [sub_resource type="SpriteFrames" id="SpriteFrames_47dm2"]
 animations = [{
 "frames": [{
-"duration": 0.5,
-"texture": ExtResource("11_w75md")
+"duration": 1.0,
+"texture": ExtResource("25_sjafs")
 }, {
-"duration": 0.5,
-"texture": ExtResource("12_t038m")
+"duration": 1.0,
+"texture": ExtResource("26_10mud")
 }, {
-"duration": 0.5,
-"texture": ExtResource("13_v2cdt")
+"duration": 1.0,
+"texture": ExtResource("27_t2d1k")
 }, {
-"duration": 0.5,
-"texture": ExtResource("14_kug31")
+"duration": 1.0,
+"texture": ExtResource("28_dge1n")
 }, {
-"duration": 0.5,
-"texture": ExtResource("15_lrjbh")
+"duration": 1.0,
+"texture": ExtResource("29_nukyw")
 }, {
-"duration": 0.5,
-"texture": ExtResource("16_64bxu")
+"duration": 1.0,
+"texture": ExtResource("30_u7okg")
 }, {
-"duration": 0.5,
-"texture": ExtResource("17_6okv0")
+"duration": 1.0,
+"texture": ExtResource("31_6vl7l")
 }, {
-"duration": 0.5,
-"texture": ExtResource("18_4bw3q")
+"duration": 1.0,
+"texture": ExtResource("32_27ec1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_k1spa")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [{
-"duration": 0.5,
-"texture": ExtResource("29_2sjg1")
+"duration": 1.0,
+"texture": ExtResource("27_brqxo")
 }, {
-"duration": 0.5,
-"texture": ExtResource("30_1v0kl")
+"duration": 1.0,
+"texture": ExtResource("28_68fav")
 }, {
-"duration": 0.5,
-"texture": ExtResource("31_t77y6")
+"duration": 1.0,
+"texture": ExtResource("29_l3cfs")
 }, {
-"duration": 0.5,
-"texture": ExtResource("32_achul")
+"duration": 1.0,
+"texture": ExtResource("30_j61h5")
 }, {
-"duration": 0.5,
-"texture": ExtResource("33_si6ei")
+"duration": 1.0,
+"texture": ExtResource("31_lho4n")
 }, {
-"duration": 0.5,
-"texture": ExtResource("34_bw2yn")
+"duration": 1.0,
+"texture": ExtResource("32_x8p00")
 }, {
-"duration": 0.5,
-"texture": ExtResource("35_hney7")
-}, {
-"duration": 0.5,
-"texture": ExtResource("36_2cx4m")
-}, {
-"duration": 0.5,
-"texture": ExtResource("37_k1ftm")
-}, {
-"duration": 0.5,
-"texture": ExtResource("38_acrgq")
+"duration": 1.0,
+"texture": ExtResource("33_328kf")
 }],
 "loop": true,
 "name": &"saut",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("19_m7skr")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("20_3465s")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("21_wiswk")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("22_rcj4w")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("23_kdabx")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("24_ygs6y")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("25_45co2")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("26_qlc1w")
 }, {
-"duration": 0.5,
+"duration": 1.0,
 "texture": ExtResource("27_yd23b")
 }],
 "loop": true,
 "name": &"teleport",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="Gradient" id="Gradient_ltkcw"]
-offsets = PackedFloat32Array(0, 0.763314)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.686391)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_68bsy"]
 gradient = SubResource("Gradient_ltkcw")
@@ -178,6 +168,13 @@ fill_from = Vector2(0.5, 0.5)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_f8ih8")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(592, 510)
+color = Color(0.866667, 0.968627, 0.776471, 1)
+blend_mode = 1
+texture = SubResource("GradientTexture2D_3pde0")
+texture_scale = 42.06
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_uls60")
@@ -188,13 +185,6 @@ environment = SubResource("Environment_syqgg")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
-
-[node name="Obstacles_node" type="Node2D" parent="."]
-script = ExtResource("2_csumo")
-
-[node name="Timer" type="Timer" parent="Obstacles_node"]
-wait_time = 3.0
-autostart = true
 
 [node name="Fond3" type="Node2D" parent="."]
 script = ExtResource("2_bx8pk")
@@ -238,26 +228,14 @@ texture = ExtResource("11_8frm5")
 centered = false
 script = ExtResource("12_ckjjf")
 
-[node name="Pont Haut" type="StaticBody2D" parent="."]
+[node name="feuFolletHaut" type="Node2D" parent="."]
+script = ExtResource("43_2klt8")
 
-[node name="pont_haut" type="Node2D" parent="Pont Haut"]
+[node name="Timer" type="Timer" parent="feuFolletHaut"]
+autostart = true
+
+[node name="pont_bas" type="Node2D" parent="."]
 script = ExtResource("10_ikedf")
-
-[node name="Pont_haut-1" type="Sprite2D" parent="Pont Haut/pont_haut"]
-position = Vector2(0, 49)
-texture = ExtResource("11_n8mey")
-centered = false
-script = ExtResource("12_pnqhd")
-
-[node name="Pont_haut-2" type="Sprite2D" parent="Pont Haut/pont_haut"]
-position = Vector2(1920, 48)
-texture = ExtResource("11_n8mey")
-centered = false
-script = ExtResource("13_7hhes")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pont Haut"]
-position = Vector2(968, 328)
-shape = SubResource("RectangleShape2D_gkvc1")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(280, 0)
@@ -278,6 +256,7 @@ scale = Vector2(0.0834961, 0.0834961)
 sprite_frames = SubResource("SpriteFrames_47dm2")
 animation = &"saut"
 autoplay = "default"
+frame_progress = 0.689323
 speed_scale = 1.25
 
 [node name="teleport_anim_timer" type="Timer" parent="Player"]
@@ -294,11 +273,11 @@ one_shot = true
 
 [node name="Light" type="PointLight2D" parent="Player"]
 position = Vector2(144, 576)
-energy = 1.14
+energy = 1.28
 range_z_min = -1
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_68bsy")
-texture_scale = 10.0
+texture_scale = 14.47
 
 [node name="light_reduce_timer" type="Timer" parent="Player"]
 wait_time = 0.2
@@ -307,36 +286,6 @@ autostart = true
 [node name="timer_saut" type="Timer" parent="Player"]
 wait_time = 0.85
 one_shot = true
-
-[node name="feuFolletHaut" type="Node2D" parent="."]
-
-[node name="feuFollet1" parent="feuFolletHaut" instance=ExtResource("21_6lhh8")]
-position = Vector2(848, 264)
-
-[node name="Pont bas" type="StaticBody2D" parent="."]
-
-[node name="pont_bas" type="Node2D" parent="Pont bas"]
-script = ExtResource("10_ikedf")
-
-[node name="Pont_bas-1" type="Sprite2D" parent="Pont bas/pont_bas"]
-texture = ExtResource("11_0jors")
-centered = false
-script = ExtResource("12_pnqhd")
-
-[node name="Pont_bas-2" type="Sprite2D" parent="Pont bas/pont_bas"]
-position = Vector2(1920, 0)
-texture = ExtResource("11_0jors")
-centered = false
-script = ExtResource("13_7hhes")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pont bas"]
-position = Vector2(960, 657)
-shape = SubResource("RectangleShape2D_gkvc1")
-
-[node name="feuFolletBas" type="Node2D" parent="."]
-script = ExtResource("43_i7b5y")
-
-[node name="Timer" type="Timer" parent="feuFolletBas"]
 
 [node name="Fond2" type="Node2D" parent="."]
 script = ExtResource("5_rweph")
@@ -358,9 +307,16 @@ stream = ExtResource("39_f7nhr")
 autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.313726, 0.0156863, 0.364706, 1)
+visible = false
+color = Color(0.278431, 0.0117647, 0.321569, 1)
 
-[connection signal="timeout" from="Obstacles_node/Timer" to="Obstacles_node" method="_on_timer_timeout"]
+[node name="feuFolletBas" type="Node2D" parent="."]
+script = ExtResource("43_i7b5y")
+
+[node name="Timer" type="Timer" parent="feuFolletBas"]
+autostart = true
+
+[connection signal="timeout" from="feuFolletHaut/Timer" to="feuFolletHaut" method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/teleport_anim_timer" to="Player" method="_on_teleport_anim_timer_timeout"]
 [connection signal="timeout" from="Player/teleport_anim_timer_down" to="Player" method="_on_teleport_anim_timer_down_timeout"]
