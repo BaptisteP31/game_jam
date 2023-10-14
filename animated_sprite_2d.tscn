@@ -10,10 +10,10 @@
 [ext_resource type="Script" path="res://CharacterBody2DMouvements.gd" id="7_yhi7o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mtwyb"]
-size = Vector2(1198, 80)
+size = Vector2(1211, 143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fl0f"]
-size = Vector2(37, 79)
+size = Vector2(41, 82.75)
 
 [node name="Main" type="Node2D"]
 
@@ -38,20 +38,31 @@ texture = ExtResource("1_8un33")
 script = ExtResource("6_jpeh4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(7, 286)
+modulate = Color(0.101961, 1, 1, 1)
+top_level = true
+light_mask = 524288
+visibility_layer = 524288
+position = Vector2(7.5, 253.5)
 shape = SubResource("RectangleShape2D_mtwyb")
+one_way_collision_margin = 0.0
+debug_color = Color(0.572549, 0.529412, 0.47451, 0.419608)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-469, 68)
+scale = Vector2(0.997852, 1.45644)
+polygon = PackedVector2Array(108.613, 12.858, -44.0947, 79.6463, 108.232, 79.6463, 342.595, 80.1454)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-413, 123)
+position = Vector2(-427, 117)
 script = ExtResource("7_yhi7o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(-34.5, 53.5)
+position = Vector2(-0.5, -51.375)
 shape = SubResource("RectangleShape2D_0fl0f")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(-35, 54)
-scale = Vector2(0.08, 0.08)
+position = Vector2(1, -51)
+scale = Vector2(0.079, 0.08)
 texture = ExtResource("7_qimoy")
