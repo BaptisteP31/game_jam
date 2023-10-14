@@ -18,24 +18,18 @@ size = Vector2(41, 82.75)
 [node name="Main" type="Node2D"]
 
 [node name="Layer1" type="Sprite2D" parent="."]
-position = Vector2(38.5555, -22.25)
-scale = Vector2(0.645833, 0.645833)
+position = Vector2(-2.22211, 1.24992)
+scale = Vector2(0.603356, 0.602315)
 texture = ExtResource("1_a27gn")
 script = ExtResource("2_kwwbf")
 
 [node name="Layer 2" type="Sprite2D" parent="."]
-position = Vector2(37.1111, -21)
-scale = Vector2(0.638889, 0.638889)
+position = Vector2(-0.611156, 1.50003)
+scale = Vector2(0.599595, 0.597222)
 texture = ExtResource("2_io7kl")
 script = ExtResource("4_umrvb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="Layer 3" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(30, -21)
-scale = Vector2(0.641667, 0.641667)
-texture = ExtResource("1_8un33")
-script = ExtResource("6_jpeh4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 modulate = Color(0.101961, 1, 1, 1)
@@ -66,3 +60,27 @@ shape = SubResource("RectangleShape2D_0fl0f")
 position = Vector2(1, -51)
 scale = Vector2(0.079, 0.08)
 texture = ExtResource("7_qimoy")
+
+[node name="Layer1-2" type="Sprite2D" parent="."]
+position = Vector2(1151, 2)
+scale = Vector2(0.59827, 0.596206)
+texture = ExtResource("1_a27gn")
+script = ExtResource("2_kwwbf")
+
+[node name="Layer 2-2" type="Sprite2D" parent="."]
+position = Vector2(1153, 3)
+scale = Vector2(0.600674, 0.59593)
+texture = ExtResource("2_io7kl")
+script = ExtResource("4_umrvb")
+
+[node name="Layer 3" type="Sprite2D" parent="."]
+position = Vector2(-4.00013, 0.500024)
+scale = Vector2(0.604167, 0.599074)
+texture = ExtResource("1_8un33")
+script = ExtResource("6_jpeh4")
+
+[node name="Layer 3-2" type="Sprite2D" parent="."]
+position = Vector2(1153.35, 3.99726)
+scale = Vector2(0.601411, 0.592598)
+texture = ExtResource("1_8un33")
+script = ExtResource("6_jpeh4")
