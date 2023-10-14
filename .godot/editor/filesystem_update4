@@ -1,8 +1,22 @@
 res://animated_sprite_2d.tscn
-res://Layer1Paralax.gd
 res://Layer 3Paralax.gd
-res://Layer 2Paralax.gd
-res://StaticBody2D.gd
-res://CollisionPolygon2D.gd
-res://CollisionShape2D.gd
+res://main.tscn
+res://Fond3.gd
+res://Fond3-1.gd
+res://Fond3-2.gd
+res://Fond2-1.gd
+res://Fond2-2.gd
+res://Fond2.gd
+res://main.gd
+res://Pont_bas-1.gd
+res://Pont_bas-2.gd
+res://pont_bas.gd
+res://Obstacle.gd
+res://CharacterBody2D.gd
 res://Sprite2D.gd
+res://obstace_sprite.gd
+res://obstacle_collision.gd
+res://player_sprite.gd
+res://Collectible/feuFollet.tscn
+res://Collectible/feuFollet.gd
+res://Global.gd

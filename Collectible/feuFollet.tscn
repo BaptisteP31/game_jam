@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://17qeocldromy"]
+
+[ext_resource type="Script" path="res://Collectible/feuFollet.gd" id="1_1h71s"]
+[ext_resource type="Texture2D" uid="uid://cpkiwutoi17xv" path="res://flame.png" id="1_xwbdg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emmhg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xwbdg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a2r0n"]
+radius = 16.0
+height = 48.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_1h71s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_emmhg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_a2r0n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

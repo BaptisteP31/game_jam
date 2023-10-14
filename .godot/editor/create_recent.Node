@@ -1,5 +1,10 @@
+Node2D
+AnimatedSprite2D
+Node
 CollisionShape2D
-StaticBody2D
+Area2D
+Timer
 Sprite2D
+StaticBody2D
 CharacterBody2D
 Camera2D
