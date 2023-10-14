@@ -11,6 +11,7 @@ script = ExtResource("1_duy8n")
 position = Vector2(2000, 568)
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+z_index = -1
 position = Vector2(60.5, 56.75)
 scale = Vector2(0.320225, 0.303681)
 texture = ExtResource("2_ydtjm")

@@ -13,3 +13,8 @@ res://Fond5.gd
 res://pont_bas.gd
 res://RocherComportement.gd
 res://rocher.tscn
+res://Obstacles_node.gd
+res://Collectible/feuFollet.gd
+res://Global.gd
+res://feuFolletBas.gd
+res://obstacle_1.tscn

@@ -1,7 +1,9 @@
+CollisionShape2D
 CollisionPolygon2D
 Sprite2D
 StaticBody2D
 Timer
+Node2D
 CanvasLayer
 CanvasModulate
 WorldEnvironment
@@ -10,9 +12,7 @@ LightOccluder2D
 AudioStreamPlayer
 AudioStreamPlayer2D
 AnimatedSprite2D
-Node2D
 Node
-CollisionShape2D
 Area2D
 CharacterBody2D
 Camera2D

@@ -19,7 +19,13 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-
+		
+		var animNode = get_node("PlayerAnim")
+		animNode.play("saut")
+		
+		var timer_de_saut = get_node("timer_saut")
+		timer_de_saut.start()
+		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
@@ -104,3 +110,8 @@ func _on_back_to_default_anim_timeout():
 func _on_light_reduce_timer_timeout():
 	var light = get_node("Light")
 	light.scale =Vector2(float(Global.health)/100,float(Global.health)/100)
+
+
+func _on_timer_saut_timeout():
+	var animNode = get_node("PlayerAnim")
+	animNode.play("default")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7olgth4la3tc"]
+
+[ext_resource type="Texture2D" uid="uid://cpmvwnjcautoj" path="res://obstacles/OBS1.png" id="1_khxrx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seacy"]
+size = Vector2(752, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2of5"]
+size = Vector2(779, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_obtv5"]
+size = Vector2(1245, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yan4u"]
+size = Vector2(221, 20)
+
+[node name="Obstacle1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(0, -1080)
+texture = ExtResource("1_khxrx")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(376, -376)
+shape = SubResource("RectangleShape2D_seacy")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1530.5, -376)
+shape = SubResource("RectangleShape2D_d2of5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(625.5, -704)
+shape = SubResource("RectangleShape2D_obtv5")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1809.5, -704)
+shape = SubResource("RectangleShape2D_yan4u")
