@@ -91,7 +91,7 @@ animations = [{
 "texture": ExtResource("19_uh1t8")
 }],
 "loop": false,
-"name": &"default",
+"name": &"pressA",
 "speed": 5.0
 }]
 
@@ -105,7 +105,7 @@ animations = [{
 "texture": ExtResource("22_2wdwp")
 }],
 "loop": true,
-"name": &"default",
+"name": &"pressX",
 "speed": 3.0
 }]
 
@@ -119,7 +119,7 @@ animations = [{
 "texture": ExtResource("25_c8f4k")
 }],
 "loop": true,
-"name": &"default",
+"name": &"pressB",
 "speed": 5.0
 }]
 
@@ -155,40 +155,42 @@ frame_progress = 0.467055
 centered = false
 
 [node name="jouer" type="Sprite2D" parent="."]
-position = Vector2(704, 816)
-scale = Vector2(0.5, 0.5)
+position = Vector2(784, 816)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("17_wda47")
 centered = false
 
 [node name="pressA" type="AnimatedSprite2D" parent="."]
-position = Vector2(704, 928)
-scale = Vector2(0.23, 0.23)
+position = Vector2(776, 904)
+scale = Vector2(0.18, 0.18)
 sprite_frames = SubResource("SpriteFrames_d2bbk")
+animation = &"pressA"
 centered = false
 
 [node name="credit" type="Sprite2D" parent="."]
-position = Vector2(128, 900)
-scale = Vector2(0.3, 0.3)
+position = Vector2(128, 912)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("20_grui0")
 centered = false
 
 [node name="pressX" type="AnimatedSprite2D" parent="."]
-position = Vector2(80, 944)
-scale = Vector2(0.17, 0.17)
+position = Vector2(96, 944)
+scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_q6nb5")
-frame_progress = 0.252901
+animation = &"pressX"
 centered = false
 
 [node name="quitter" type="Sprite2D" parent="."]
-position = Vector2(1512, 896)
-scale = Vector2(0.3, 0.3)
+position = Vector2(1600, 904)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("23_kxxkm")
 centered = false
 
 [node name="pressB" type="AnimatedSprite2D" parent="."]
 position = Vector2(1792, 944)
-scale = Vector2(0.17, 0.17)
+scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_8544j")
+animation = &"pressB"
 centered = false
 
 [node name="Timer" type="Timer" parent="."]

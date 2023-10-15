@@ -13,6 +13,7 @@ size = Vector2(1921, 20)
 size = Vector2(192.531, 20)
 
 [node name="Obstacle2" type="Node2D"]
+position = Vector2(1920, 0)
 
 [node name="Obstacle_2_scene" type="StaticBody2D" parent="."]
 script = ExtResource("1_ln8ru")

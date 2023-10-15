@@ -8,8 +8,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position = Vector2(position[0]- 10, position[1])
-
-	if position.x <= - (1920):
-		var parent = get_parent()
-		parent.queue_free()
+	position = Vector2(position[0]- 5, position[1])

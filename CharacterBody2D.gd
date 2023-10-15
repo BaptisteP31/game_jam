@@ -19,7 +19,6 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 		
 		
-
 	# Handle Jump.
 	if Input.is_action_just_pressed("A") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
@@ -80,8 +79,6 @@ func _input(event):
 		
 		var teleport_timer_down = get_node("teleport_anim_timer_down")
 		teleport_timer_down.start()
-	
-
 		
 		
 func _on_timer_timeout():
@@ -138,4 +135,7 @@ func death():
 	Global.health = 100
 	Global.currentFeu = 0
 	get_tree().paused=true
+	
+	var shadow= get_node("../PointLight2D")
+	shadow.visible=false
 

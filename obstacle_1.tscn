@@ -16,6 +16,7 @@ size = Vector2(1709, 20)
 size = Vector2(221, 20)
 
 [node name="Obstacle1" type="Node2D"]
+position = Vector2(1920, 0)
 
 [node name="Obstacle_1_scene" type="StaticBody2D" parent="."]
 position = Vector2(0, 1080)

@@ -13,9 +13,10 @@ size = Vector2(150.5, 82)
 size = Vector2(1921, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lanub"]
-size = Vector2(538, 20)
+size = Vector2(696.022, 335.992)
 
 [node name="Obstacle4" type="Node2D"]
+position = Vector2(1920, 0)
 
 [node name="Obstacle_4_scene" type="StaticBody2D" parent="."]
 script = ExtResource("1_uurfk")
@@ -37,6 +38,6 @@ position = Vector2(959.5, 704)
 shape = SubResource("RectangleShape2D_68col")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstacle_4_scene"]
-position = Vector2(1176, 536)
-rotation = -0.959931
+position = Vector2(1248.03, 731.989)
+rotation = -1.57097
 shape = SubResource("RectangleShape2D_lanub")

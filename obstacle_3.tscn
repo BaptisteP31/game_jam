@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvtnjw5rrbsyo"]
+[gd_scene load_steps=7 format=3 uid="uid://bvtnjw5rrbsyo"]
 
 [ext_resource type="Script" path="res://Obstacle_3_scene.gd" id="1_8w5h3"]
 [ext_resource type="Texture2D" uid="uid://8kmd2e6cycxq" path="res://obstacles/OBS3.png" id="1_vt42y"]
@@ -10,15 +10,13 @@ size = Vector2(1920, 18)
 size = Vector2(1921, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4aikv"]
-size = Vector2(97.25, 41)
+size = Vector2(104, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1327"]
-size = Vector2(481, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uacn"]
-size = Vector2(632.877, 20)
+size = Vector2(694.065, 728.093)
 
 [node name="Obstacle3" type="Node2D"]
+position = Vector2(1920, 0)
 
 [node name="Obstacle_3_scene" type="StaticBody2D" parent="."]
 script = ExtResource("1_8w5h3")
@@ -36,15 +34,10 @@ position = Vector2(959.5, 376)
 shape = SubResource("RectangleShape2D_xxy7y")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacle_3_scene"]
-position = Vector2(1159.38, 340.5)
+position = Vector2(1148, 344)
 shape = SubResource("RectangleShape2D_4aikv")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstacle_3_scene"]
-position = Vector2(936, 520)
-rotation = -0.785398
+position = Vector2(1146.98, 733.034)
+rotation = -1.56395
 shape = SubResource("RectangleShape2D_j1327")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Obstacle_3_scene"]
-position = Vector2(1176, 592)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_1uacn")

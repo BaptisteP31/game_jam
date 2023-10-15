@@ -27,3 +27,6 @@ res://Global.gd
 res://musique.tscn
 res://AnimatedSprite2D.gd
 res://sceneCredit.gd
+res://ponts.gd
+res://ponts_static.gd
+res://StaticBody2DMovement.gd
