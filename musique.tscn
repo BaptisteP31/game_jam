@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://brqe8hkq6tvtj"]
+
+[ext_resource type="AudioStream" uid="uid://ktprxhffp3mq" path="res://Green Lights.wav" id="1_tdt36"]
+
+[node name="Musique" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_tdt36")
+autoplay = true

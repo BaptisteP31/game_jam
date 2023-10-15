@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://d2jssa31tomaj"]
+[gd_scene load_steps=85 format=3 uid="uid://d2jssa31tomaj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_f8ih8"]
 [ext_resource type="Script" path="res://Fond3.gd" id="2_bx8pk"]
@@ -49,7 +49,6 @@
 [ext_resource type="Texture2D" uid="uid://bckld55ewmwk5" path="res://runFinal/Illustration_sans_titre-16.png" id="33_k1spa"]
 [ext_resource type="Texture2D" uid="uid://p2umwxb4rpyq" path="res://sautFinal/Illustration_sans_titre-8.png" id="34_tacig"]
 [ext_resource type="Texture2D" uid="uid://b2smvqp8wt50" path="res://sautFinal/Illustration_sans_titre-9.png" id="35_d3ttg"]
-[ext_resource type="AudioStream" uid="uid://ktprxhffp3mq" path="res://Green Lights.wav" id="39_f7nhr"]
 [ext_resource type="Script" path="res://feuFolletHaut.gd" id="43_2klt8"]
 [ext_resource type="Script" path="res://feuFolletBas.gd" id="43_i7b5y"]
 [ext_resource type="Texture2D" uid="uid://chg57hsfkjvmh" path="res://premierplanfinal.png" id="46_quppi"]
@@ -414,11 +413,6 @@ position = Vector2(9600, 0)
 texture = ExtResource("48_njlqr")
 centered = false
 script = ExtResource("7_uukri")
-
-[node name="Musique" type="AudioStreamPlayer" parent="."]
-process_mode = 3
-stream = ExtResource("39_f7nhr")
-autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false

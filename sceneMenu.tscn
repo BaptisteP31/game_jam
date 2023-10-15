@@ -106,7 +106,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8544j"]
@@ -190,3 +190,8 @@ position = Vector2(1792, 944)
 scale = Vector2(0.17, 0.17)
 sprite_frames = SubResource("SpriteFrames_8544j")
 centered = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+
+[connection signal="timeout" from="Timer" to="bgNoir" method="_on_timer_timeout"]

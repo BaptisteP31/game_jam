@@ -136,6 +136,6 @@ func death():
 	mort.visible = true
 	mort.set_z_index(20)
 	Global.health = 100
-	Global.musicprogress = get_node("../Musique").get_playback_position()
+	Global.currentFeu = 0
 	get_tree().paused=true
 
