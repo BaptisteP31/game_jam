@@ -41,7 +41,7 @@ position = Vector2(504, -136)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_msh2l")
 autoplay = "default"
-frame_progress = 0.0827373
+frame_progress = 0.944245
 centered = false
 script = ExtResource("7_glfr6")
 
