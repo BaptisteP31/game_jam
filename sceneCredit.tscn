@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bny1a76r5oo2w"]
+
+[ext_resource type="Script" path="res://sceneCredit.gd" id="1_qvr3x"]
+
+[node name="sceneCredit" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+script = ExtResource("1_qvr3x")

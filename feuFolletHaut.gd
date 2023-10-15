@@ -11,7 +11,7 @@ func _on_timer_timeout():
 	var rng = RandomNumberGenerator.new()
 	
 
-	var posArray = [[1920 + 60, 120], [1920 + 100, 230], [1920 + 200, 150], [1920 + 150, 210]]
+	var posArray = [[1920 + 60, 140], [1920 + 100, 230], [1920 + 200, 150], [1920 + 150, 210]]
 	
 	var indiceRng = rng.randi_range(0, 3)
 	feuFollet.position = Vector2(posArray[indiceRng][0], posArray[indiceRng][1])
