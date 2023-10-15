@@ -14,14 +14,26 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
 	
+
+	
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		var bruitstep = get_node("SFX_footstep")
+		bruitstep.stop()
+		
+	if is_on_floor():
+		var bruitstep = get_node("SFX_footstep")
+		if bruitstep.is_playing() == false:
+			bruitstep.play()
 		
 		
 	# Handle Jump.
 	if Input.is_action_just_pressed("A") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		var bruitJump = get_node("SFX_jump")
+		bruitJump.play()
 		
 		var animeNode = get_node("PlayerAnim")
 		animeNode.play("saut")
@@ -50,6 +62,9 @@ func _physics_process(delta):
 		Global.health += 10
 		Global.isPicking = false
 		Global.currentFeu -= 1
+		var bruitAspiration = get_node("SFX_aspiration")
+		bruitAspiration.play()
+
 		
 	if Global.health == 0:
 		#get_tree().quit()b
@@ -68,6 +83,10 @@ func _input(event):
 
 	if isForeground and Input.is_action_just_pressed("Y"):
 		animNode.play("teleport", 2.5)
+		var bruitTP = get_node("SFX_tp")
+		bruitTP.play()
+		
+		
 		isForeground = false
 		
 		var teleport_timer = get_node("teleport_anim_timer")
@@ -75,6 +94,10 @@ func _input(event):
 
 	elif not isForeground and Input.is_action_just_pressed("Y"):
 		animNode.play("teleport", 2.5)
+		
+		var bruitTP = get_node("SFX_tp")
+		bruitTP.play()
+		
 		isForeground = true
 		
 		var teleport_timer_down = get_node("teleport_anim_timer_down")

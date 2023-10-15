@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://d2jssa31tomaj"]
+[gd_scene load_steps=112 format=3 uid="uid://d2jssa31tomaj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_f8ih8"]
 [ext_resource type="Script" path="res://Fond3.gd" id="2_bx8pk"]
@@ -89,9 +89,14 @@
 [ext_resource type="Script" path="res://pressB.gd" id="65_q8548"]
 [ext_resource type="Texture2D" uid="uid://b5kxik4rq3r81" path="res://Rejouer.png" id="66_yoaub"]
 [ext_resource type="Script" path="res://rejouer.gd" id="67_8f42f"]
+[ext_resource type="AudioStream" uid="uid://cj41h62fgymk2" path="res://son/Sontp.mp3" id="68_ugben"]
+[ext_resource type="AudioStream" uid="uid://blisomrckur1u" path="res://son/Jump_Mixage.wav" id="69_ovec6"]
+[ext_resource type="AudioStream" uid="uid://tbluvpvciwe8" path="res://son/Footstep_mixage.wav" id="70_8tsdo"]
 [ext_resource type="Texture2D" uid="uid://eg8acudf4c8y" path="res://pressA/A_1.png" id="71_4oxwk"]
+[ext_resource type="AudioStream" uid="uid://cs7xdj3atu2yw" path="res://son/sonaspiration.mp3" id="71_gh30p"]
 [ext_resource type="Texture2D" uid="uid://cyxryuy8xiltd" path="res://pressA/A_2.png" id="72_g136r"]
 [ext_resource type="Script" path="res://pressA.gd" id="73_7pxt4"]
+[ext_resource type="AudioStream" uid="uid://cmfa8h1aep5lo" path="res://son/Sonmort.mp3" id="87_x8iy2"]
 
 [sub_resource type="Gradient" id="Gradient_7ayun"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -324,11 +329,19 @@ animations = [{
 [sub_resource type="GDScript" id="GDScript_nr0ux"]
 script/source = "extends AnimatedSprite2D
 
-
+var tmp = true
 func _process(delta):
+	
+	if tmp and self.visible:
+		var bruitMort = get_node(\"../SFX_mort\")
+		bruitMort.play()
+		tmp = false
+	
 	if self.visible==true and Input.is_action_just_released(\"A\"):
 		get_tree().change_scene_to_file(\"res://main.tscn\")
 		get_tree().paused=false
+		
+	
 		
 	elif self.visible == true and Input.is_action_just_released(\"B\"):
 		get_tree().quit()
@@ -509,6 +522,22 @@ autostart = true
 wait_time = 0.85
 one_shot = true
 
+[node name="SFX_tp" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("68_ugben")
+volume_db = 7.0
+
+[node name="SFX_jump" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("69_ovec6")
+volume_db = 24.0
+
+[node name="SFX_footstep" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("70_8tsdo")
+volume_db = 12.0
+
+[node name="SFX_aspiration" type="AudioStreamPlayer2D" parent="Player"]
+stream = ExtResource("71_gh30p")
+volume_db = 15.0
+
 [node name="Fond2" type="Node2D" parent="."]
 script = ExtResource("5_rweph")
 
@@ -549,6 +578,11 @@ autoplay = "default"
 frame = 7
 frame_progress = 1.0
 script = SubResource("GDScript_nr0ux")
+
+[node name="SFX_mort" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("87_x8iy2")
+volume_db = 10.0
 
 [node name="quitter" type="Sprite2D" parent="."]
 visible = false
