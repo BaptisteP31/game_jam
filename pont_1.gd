@@ -10,9 +10,9 @@ func _ready():
 func _process(delta):
 	var parent = get_parent()
 	position = Vector2(position[0]- parent.speed, position[1])
-	
+
 	var sprite_size = 9600
 	
 	if position.x <= - (sprite_size):
 		# Réinitialise la position du sprite à la limite droite de l'écran
-		position.x = 9600
+		position.x = 0

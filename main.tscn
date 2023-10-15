@@ -669,7 +669,6 @@ stream = ExtResource("71_gh30p")
 volume_db = 15.0
 
 [node name="Fond2" type="Node2D" parent="."]
-visible = false
 script = ExtResource("5_rweph")
 
 [node name="Fond2-1" type="Sprite2D" parent="Fond2"]
