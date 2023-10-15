@@ -1,11 +1,11 @@
-AudioStreamPlayer2D
+CollisionPolygon2D
 CollisionShape2D
-Sprite2D
 StaticBody2D
+Sprite2D
+Node2D
+AudioStreamPlayer2D
 Timer
 AnimatedSprite2D
-CollisionPolygon2D
-Node2D
 Node
 PointLight2D
 ShaderGlobalsOverride
