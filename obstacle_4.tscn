@@ -1,16 +1,16 @@
 [gd_scene load_steps=7 format=3 uid="uid://7l6i3vejccgx"]
 
 [ext_resource type="Script" path="res://Obstacle_4_scene.gd" id="1_uurfk"]
-[ext_resource type="Texture2D" uid="uid://dhx2bcv55ya4k" path="res://obstacles/OBS4.png" id="2_fdec8"]
+[ext_resource type="Texture2D" uid="uid://cec1bv823di3u" path="res://obstacles/OBS4final.png" id="2_mfndj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfv47"]
-size = Vector2(1921, 20)
+size = Vector2(1920, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_klebi"]
 size = Vector2(150.5, 82)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68col"]
-size = Vector2(1921, 20)
+size = Vector2(1920, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lanub"]
 size = Vector2(696.022, 335.992)
@@ -22,11 +22,11 @@ position = Vector2(1920, 0)
 script = ExtResource("1_uurfk")
 
 [node name="Obstacle_4_sprite" type="Sprite2D" parent="Obstacle_4_scene"]
-texture = ExtResource("2_fdec8")
+texture = ExtResource("2_mfndj")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle_4_scene"]
-position = Vector2(959.5, 376)
+position = Vector2(960, 380)
 shape = SubResource("RectangleShape2D_hfv47")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacle_4_scene"]
@@ -34,7 +34,7 @@ position = Vector2(1356.75, 329)
 shape = SubResource("RectangleShape2D_klebi")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacle_4_scene"]
-position = Vector2(959.5, 704)
+position = Vector2(960, 708)
 shape = SubResource("RectangleShape2D_68col")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstacle_4_scene"]

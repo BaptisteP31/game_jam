@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhx2bcv55ya4k"
-path="res://.godot/imported/OBS4.png-b48447cefc1c8bde11634dd2069aacba.ctex"
+uid="uid://dc2ij32wmwuuy"
+path="res://.godot/imported/OBS2final.png-6b1ff5c1a3e7dad3bc2dc1837e789809.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://obstacles/OBS4.png"
-dest_files=["res://.godot/imported/OBS4.png-b48447cefc1c8bde11634dd2069aacba.ctex"]
+source_file="res://obstacles/OBS2final.png"
+dest_files=["res://.godot/imported/OBS2final.png-6b1ff5c1a3e7dad3bc2dc1837e789809.ctex"]
 
 [params]
 
