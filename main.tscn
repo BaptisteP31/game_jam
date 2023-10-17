@@ -116,10 +116,10 @@ size = Vector2(1917, 42.5)
 size = Vector2(1920, 57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bolqu"]
-size = Vector2(1864, 40)
+size = Vector2(1920, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_idxtr"]
-size = Vector2(1864, 56)
+size = Vector2(1920, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msrgw"]
 size = Vector2(69, 128)
@@ -447,12 +447,6 @@ texture = ExtResource("11_8frm5")
 centered = false
 script = ExtResource("12_ckjjf")
 
-[node name="feuFolletHaut" type="Node2D" parent="."]
-script = ExtResource("43_2klt8")
-
-[node name="Timer" type="Timer" parent="feuFolletHaut"]
-autostart = true
-
 [node name="pont" type="Node2D" parent="."]
 script = ExtResource("69_35v7m")
 
@@ -465,7 +459,6 @@ script = ExtResource("20_dy31l")
 
 [node name="Sprite2D" type="Sprite2D" parent="pont/StaticBody2D"]
 position = Vector2(960, 540)
-scale = Vector2(1, 1)
 texture = ExtResource("20_40urc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pont/StaticBody2D"]
@@ -477,16 +470,16 @@ position = Vector2(960, 716.5)
 shape = SubResource("RectangleShape2D_eljnx")
 
 [node name="Sprite2D2" type="Sprite2D" parent="pont/StaticBody2D"]
-position = Vector2(2852, 540)
-scale = Vector2(0.970833, 1)
+position = Vector2(2880, 540)
+scale = Vector2(1, 1)
 texture = ExtResource("20_40urc")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(2852, 380)
+position = Vector2(2880, 380)
 shape = SubResource("RectangleShape2D_bolqu")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(2852, 716)
+position = Vector2(2880, 716)
 shape = SubResource("RectangleShape2D_idxtr")
 
 [node name="Player" type="CharacterBody2D" parent="."]
@@ -573,6 +566,13 @@ script = ExtResource("7_uukri")
 visible = false
 color = Color(0.278431, 0.0117647, 0.321569, 1)
 
+[node name="feuFolletHaut" type="Node2D" parent="."]
+script = ExtResource("43_2klt8")
+
+[node name="Timer" type="Timer" parent="feuFolletHaut"]
+wait_time = 1.5
+autostart = true
+
 [node name="feuFolletBas" type="Node2D" parent="."]
 script = ExtResource("43_i7b5y")
 
@@ -633,7 +633,6 @@ sprite_frames = SubResource("SpriteFrames_sylny")
 centered = false
 script = ExtResource("73_7pxt4")
 
-[connection signal="timeout" from="feuFolletHaut/Timer" to="feuFolletHaut" method="_on_timer_timeout"]
 [connection signal="timeout" from="pont/Timer" to="pont" method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/teleport_anim_timer" to="Player" method="_on_teleport_anim_timer_timeout"]
@@ -641,4 +640,5 @@ script = ExtResource("73_7pxt4")
 [connection signal="timeout" from="Player/back_to_default_anim" to="Player" method="_on_back_to_default_anim_timeout"]
 [connection signal="timeout" from="Player/light_reduce_timer" to="Player" method="_on_light_reduce_timer_timeout"]
 [connection signal="timeout" from="Player/timer_saut" to="Player" method="_on_timer_saut_timeout"]
+[connection signal="timeout" from="feuFolletHaut/Timer" to="feuFolletHaut" method="_on_timer_timeout"]
 [connection signal="timeout" from="feuFolletBas/Timer" to="feuFolletBas" method="_on_timer_timeout"]

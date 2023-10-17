@@ -10,13 +10,18 @@ var obs5 = preload("res://obstacle_5.tscn")
 var obs6 = preload("res://obstacle_6.tscn")
 var obs7 = preload("res://obstacle_7.tscn")
 var obs8 = preload("res://obstacle_8.tscn")
+var obs9 = preload("res://obstacle_9.tscn")
+var obs10 = preload("res://obstacle_10.tscn")
+var obs11 = preload("res://obstacle_11.tscn")
+var obs12 = preload("res://obstacle_12.tscn")
+var obs13 = preload("res://obstacle_13.tscn")
 
 func _ready():
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Obstacles.size()<64:
+	if Obstacles.size()<104:
 		Obstacles.append(obs1)
 		Obstacles.append(obs2)
 		Obstacles.append(obs3)
@@ -25,6 +30,11 @@ func _process(delta):
 		Obstacles.append(obs6)
 		Obstacles.append(obs7)
 		Obstacles.append(obs8)
+		Obstacles.append(obs9)
+		Obstacles.append(obs10)
+		Obstacles.append(obs11)
+		Obstacles.append(obs12)
+		Obstacles.append(obs13)
 
 func _on_timer_timeout():
 	var nb_alea = randi_range(0, Obstacles.size()-1)

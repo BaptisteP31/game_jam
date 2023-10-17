@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bne4frp5o24a1"]
+
+[ext_resource type="Script" path="res://obstacle_13_Movement.gd" id="1_f1isv"]
+[ext_resource type="Texture2D" uid="uid://dcvmrj3hdgwbc" path="res://obstacles/OBS14final.png" id="1_ml2u2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7fp6"]
+size = Vector2(1920, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dep5e"]
+size = Vector2(1920, 24)
+
+[node name="obstacle_13" type="Node2D"]
+position = Vector2(1920, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("1_f1isv")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(960, 540)
+scale = Vector2(1, 1)
+texture = ExtResource("1_ml2u2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(960, 708)
+shape = SubResource("RectangleShape2D_c7fp6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(960, 380)
+shape = SubResource("RectangleShape2D_dep5e")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(632, 384)
+polygon = PackedVector2Array(-96, -8, -8, -40, -8, -184, -248, -384, 1168, -384, 912, -280, 912, -88, 1104, -8)

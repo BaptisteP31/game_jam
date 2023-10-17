@@ -10,7 +10,7 @@ size = Vector2(1920, 24)
 size = Vector2(1920, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m2q30"]
-size = Vector2(176, 301)
+size = Vector2(176, 312)
 
 [node name="obstacle_8" type="Node2D"]
 position = Vector2(1920, 0)
@@ -20,7 +20,6 @@ script = ExtResource("1_3ic0b")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(960, 540)
-scale = Vector2(1, 1)
 texture = ExtResource("1_dgalr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -32,7 +31,7 @@ position = Vector2(960, 380)
 shape = SubResource("RectangleShape2D_bn0he")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(968, 550.5)
+position = Vector2(968, 548)
 shape = SubResource("RectangleShape2D_m2q30")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]

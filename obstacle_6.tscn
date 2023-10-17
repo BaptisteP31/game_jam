@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://criiy5m2wvte8"]
+[gd_scene load_steps=6 format=3 uid="uid://criiy5m2wvte8"]
 
 [ext_resource type="Script" path="res://Obstacle_6_scene.gd" id="1_wif48"]
 [ext_resource type="Texture2D" uid="uid://dmunmd7paea1g" path="res://obstacles/OBS6final.png" id="1_wptim"]
@@ -10,10 +10,7 @@ size = Vector2(1920, 24)
 size = Vector2(1920, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0drls"]
-size = Vector2(448, 293)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgo4r"]
-size = Vector2(40, 85)
+size = Vector2(448, 688)
 
 [node name="obstacle_6" type="Node2D"]
 position = Vector2(1920, 0)
@@ -34,9 +31,9 @@ position = Vector2(960, 380)
 shape = SubResource("RectangleShape2D_sw3ue")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1240, 546.5)
+position = Vector2(1240, 736)
 shape = SubResource("RectangleShape2D_0drls")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1236, 330.5)
-shape = SubResource("RectangleShape2D_xgo4r")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1216, 384)
+polygon = PackedVector2Array(0, -24, 0, -96, 24, -96, 24, -80, 40, -80, 40, -40, 32, -40, 32, -16, 0, -16)

@@ -1,13 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://7l6i3vejccgx"]
+[gd_scene load_steps=6 format=3 uid="uid://7l6i3vejccgx"]
 
 [ext_resource type="Script" path="res://Obstacle_4_scene.gd" id="1_uurfk"]
 [ext_resource type="Texture2D" uid="uid://cec1bv823di3u" path="res://obstacles/OBS4final.png" id="2_mfndj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hfv47"]
 size = Vector2(1920, 24)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_klebi"]
-size = Vector2(150.5, 82)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_68col"]
 size = Vector2(1920, 24)
@@ -29,10 +26,6 @@ centered = false
 position = Vector2(960, 380)
 shape = SubResource("RectangleShape2D_hfv47")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacle_4_scene"]
-position = Vector2(1356.75, 329)
-shape = SubResource("RectangleShape2D_klebi")
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacle_4_scene"]
 position = Vector2(960, 708)
 shape = SubResource("RectangleShape2D_68col")
@@ -41,3 +34,7 @@ shape = SubResource("RectangleShape2D_68col")
 position = Vector2(1248.03, 731.989)
 rotation = -1.57097
 shape = SubResource("RectangleShape2D_lanub")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Obstacle_4_scene"]
+position = Vector2(1288, 384)
+polygon = PackedVector2Array(-8, -16, -8, -64, 0, -64, 0, -88, 8, -88, 8, -96, 88, -96, 144, -48, 144, -16)
