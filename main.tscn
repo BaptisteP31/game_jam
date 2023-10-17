@@ -1,4 +1,4 @@
-[gd_scene load_steps=130 format=3 uid="uid://d2jssa31tomaj"]
+[gd_scene load_steps=114 format=3 uid="uid://d2jssa31tomaj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_f8ih8"]
 [ext_resource type="Script" path="res://Fond3.gd" id="2_bx8pk"]
@@ -22,7 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://b68hqs0548j8g" path="res://fondFF/5.png" id="14_83fsq"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="14_y3nea"]
 [ext_resource type="Texture2D" uid="uid://bc1jebumficmp" path="res://teleport_anim/Illustration_sans_titre-1.png" id="19_m7skr"]
+[ext_resource type="Texture2D" uid="uid://dgebevkkb4b3c" path="res://obstacles/OBS0final.png" id="20_40urc"]
 [ext_resource type="Texture2D" uid="uid://bqk00lnw0i4wy" path="res://teleport_anim/Illustration_sans_titre-2.png" id="20_3465s"]
+[ext_resource type="Script" path="res://StaticBody2DMovement.gd" id="20_dy31l"]
 [ext_resource type="Texture2D" uid="uid://ocbn3m5mbtgc" path="res://teleport_anim/Illustration_sans_titre-3.png" id="21_wiswk"]
 [ext_resource type="Texture2D" uid="uid://mtudw7hwsgkl" path="res://teleport_anim/Illustration_sans_titre-4.png" id="22_rcj4w"]
 [ext_resource type="Texture2D" uid="uid://py0v0uavsqlm" path="res://teleport_anim/Illustration_sans_titre-5.png" id="23_kdabx"]
@@ -90,15 +92,11 @@
 [ext_resource type="Script" path="res://pont.gd" id="69_35v7m"]
 [ext_resource type="AudioStream" uid="uid://blisomrckur1u" path="res://son/Jump_Mixage.wav" id="69_ovec6"]
 [ext_resource type="AudioStream" uid="uid://tbluvpvciwe8" path="res://son/Footstep_mixage.wav" id="70_8tsdo"]
-[ext_resource type="Script" path="res://pont_1.gd" id="70_kjx21"]
 [ext_resource type="Texture2D" uid="uid://eg8acudf4c8y" path="res://pressA/A_1.png" id="71_4oxwk"]
 [ext_resource type="AudioStream" uid="uid://cs7xdj3atu2yw" path="res://son/sonaspiration.mp3" id="71_gh30p"]
 [ext_resource type="Texture2D" uid="uid://cyxryuy8xiltd" path="res://pressA/A_2.png" id="72_g136r"]
-[ext_resource type="Script" path="res://StaticBody2D2_pont2.gd" id="72_reqag"]
 [ext_resource type="Script" path="res://pressA.gd" id="73_7pxt4"]
 [ext_resource type="AudioStream" uid="uid://cmfa8h1aep5lo" path="res://son/Sonmort.mp3" id="87_x8iy2"]
-[ext_resource type="Texture2D" uid="uid://dp226dr3a0hop" path="res://backup5_1.png" id="95_x45kk"]
-[ext_resource type="Texture2D" uid="uid://cowmodf2a25kx" path="res://backup5_2.png" id="96_xf4mf"]
 
 [sub_resource type="Gradient" id="Gradient_7ayun"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -111,59 +109,17 @@ background_mode = 3
 fog_light_color = Color(0, 0, 0, 1)
 fog_light_energy = 2.41
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyo8c"]
-size = Vector2(4461, 130)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20ngf"]
+size = Vector2(1917, 42.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_762q1"]
-size = Vector2(4057, 34)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eljnx"]
+size = Vector2(1920, 57)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_esaoq"]
-size = Vector2(285, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bolqu"]
+size = Vector2(1864, 40)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0tkh"]
-size = Vector2(4081, 26)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvhxu"]
-size = Vector2(4081, 138)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_778ri"]
-size = Vector2(461, 64)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mclo6"]
-size = Vector2(296, 241)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfvrp"]
-size = Vector2(752, 432)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f241f"]
-size = Vector2(649, 256)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1wpq"]
-size = Vector2(2153, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwamo"]
-size = Vector2(2553, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6tbm5"]
-size = Vector2(277, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jar65"]
-size = Vector2(3409, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nh1fc"]
-size = Vector2(2905, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vku6"]
-size = Vector2(2153, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qciqy"]
-size = Vector2(2705, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ni5qv"]
-size = Vector2(360, 704)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ln1bc"]
-size = Vector2(529, 696)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idxtr"]
+size = Vector2(1864, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msrgw"]
 size = Vector2(69, 128)
@@ -500,108 +456,38 @@ autostart = true
 [node name="pont" type="Node2D" parent="."]
 script = ExtResource("69_35v7m")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="pont"]
-script = ExtResource("70_kjx21")
+[node name="Timer" type="Timer" parent="pont"]
+wait_time = 6.3
+autostart = true
 
-[node name="pont_1" type="Sprite2D" parent="pont/StaticBody2D"]
-texture = ExtResource("95_x45kk")
-centered = false
+[node name="StaticBody2D" type="StaticBody2D" parent="pont"]
+script = ExtResource("20_dy31l")
+
+[node name="Sprite2D" type="Sprite2D" parent="pont/StaticBody2D"]
+position = Vector2(960, 540)
+scale = Vector2(1, 1)
+texture = ExtResource("20_40urc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(2233.5, 759)
-shape = SubResource("RectangleShape2D_cyo8c")
+position = Vector2(960, 381.25)
+shape = SubResource("RectangleShape2D_20ngf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(2035.5, 383)
-shape = SubResource("RectangleShape2D_762q1")
+position = Vector2(960, 716.5)
+shape = SubResource("RectangleShape2D_eljnx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="pont/StaticBody2D"]
+position = Vector2(2852, 540)
+scale = Vector2(0.970833, 1)
+texture = ExtResource("20_40urc")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(4953.5, 368)
-shape = SubResource("RectangleShape2D_esaoq")
+position = Vector2(2852, 380)
+shape = SubResource("RectangleShape2D_bolqu")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(7559.5, 376)
-shape = SubResource("RectangleShape2D_x0tkh")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(7559.5, 763)
-shape = SubResource("RectangleShape2D_mvhxu")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(3166.5, 672)
-shape = SubResource("RectangleShape2D_778ri")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(3196, 520.5)
-shape = SubResource("RectangleShape2D_mclo6")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(8832, 864)
-shape = SubResource("RectangleShape2D_rfvrp")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="pont/StaticBody2D"]
-position = Vector2(8828.5, 520)
-shape = SubResource("RectangleShape2D_f241f")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pont/StaticBody2D"]
-position = Vector2(4056, 368)
-polygon = PackedVector2Array(16, 16, 64, 56, 144, 88, 232, 104, 328, 112, 416, 112, 496, 96, 584, 80, 640, 64, 696, 48, 744, 16, 768, 8, 768, -8, 760, -16, 744, -8, 704, 24, 640, 56, 552, 80, 456, 96, 400, 104, 304, 96, 208, 88, 136, 72, 96, 48, 56, 32, 32, 8, 0, 0, 0, 16)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="pont/StaticBody2D"]
-position = Vector2(5096, 360)
-polygon = PackedVector2Array(0, 8, 8, 16, 40, 24, 80, 32, 144, 40, 216, 48, 272, 48, 336, 40, 384, 32, 424, 16, 424, 0, 400, 8, 336, 32, 280, 32, 216, 32, 176, 32, 128, 24, 80, 16, 40, 8, 16, 0, 16, 0, -8, 0)
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="pont"]
-script = ExtResource("72_reqag")
-
-[node name="pont_2" type="Sprite2D" parent="pont/StaticBody2D2"]
-position = Vector2(9600, 0)
-texture = ExtResource("96_xf4mf")
-centered = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pont/StaticBody2D2"]
-position = Vector2(10675.5, 376)
-shape = SubResource("RectangleShape2D_d1wpq")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="pont/StaticBody2D2"]
-position = Vector2(10875.5, 704)
-shape = SubResource("RectangleShape2D_dwamo")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="pont/StaticBody2D2"]
-position = Vector2(12637.5, 368)
-shape = SubResource("RectangleShape2D_6tbm5")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="pont/StaticBody2D2"]
-position = Vector2(14920, 368)
-shape = SubResource("RectangleShape2D_jar65")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="pont/StaticBody2D2"]
-position = Vector2(14651.5, 704)
-shape = SubResource("RectangleShape2D_nh1fc")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="pont/StaticBody2D2"]
-position = Vector2(18123.5, 376)
-shape = SubResource("RectangleShape2D_4vku6")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="pont/StaticBody2D2"]
-position = Vector2(17847.5, 704)
-shape = SubResource("RectangleShape2D_qciqy")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="pont/StaticBody2D2"]
-position = Vector2(14676, 728)
-shape = SubResource("RectangleShape2D_ni5qv")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="pont/StaticBody2D2"]
-position = Vector2(18247.5, 732)
-shape = SubResource("RectangleShape2D_ln1bc")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pont/StaticBody2D2"]
-position = Vector2(11752, 376)
-polygon = PackedVector2Array(0, 0, 24, 24, 48, 48, 112, 72, 176, 88, 248, 96, 344, 104, 440, 104, 520, 88, 624, 64, 704, 32, 752, 0, 752, -24, 688, 16, 584, 56, 480, 80, 416, 88, 320, 88, 232, 80, 160, 64, 96, 48, 48, 24, 16, 0, 0, -8)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="pont/StaticBody2D2"]
-position = Vector2(12776, 368)
-polygon = PackedVector2Array(0, 8, 56, 24, 120, 32, 200, 40, 256, 40, 328, 32, 376, 24, 424, 8, 440, 8, 440, -16, 400, 0, 328, 16, 264, 24, 200, 24, 120, 16, 64, 8, 32, 0, 0, -8)
+position = Vector2(2852, 716)
+shape = SubResource("RectangleShape2D_idxtr")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(280, 0)
@@ -747,6 +633,7 @@ centered = false
 script = ExtResource("73_7pxt4")
 
 [connection signal="timeout" from="feuFolletHaut/Timer" to="feuFolletHaut" method="_on_timer_timeout"]
+[connection signal="timeout" from="pont/Timer" to="pont" method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_timer_timeout"]
 [connection signal="timeout" from="Player/teleport_anim_timer" to="Player" method="_on_teleport_anim_timer_timeout"]
 [connection signal="timeout" from="Player/teleport_anim_timer_down" to="Player" method="_on_teleport_anim_timer_down_timeout"]
