@@ -1,33 +1,32 @@
 [gd_scene load_steps=6 format=3 uid="uid://nyindto8bl5r"]
 
 [ext_resource type="Script" path="res://Obstacle_5_scene.gd" id="1_0rq0n"]
-[ext_resource type="Texture2D" uid="uid://cr564au3p22xe" path="res://obstacles/OBS5final.png" id="2_5uhrs"]
+[ext_resource type="Texture2D" uid="uid://djbdd0l0kyjh" path="res://obstacles/OBS5.png" id="2_ryrku"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wfc7"]
-size = Vector2(1920, 24)
+size = Vector2(1920, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3i1qq"]
-size = Vector2(1920, 24)
+size = Vector2(1921, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d1gia"]
 size = Vector2(694.892, 592.31)
 
 [node name="Obstacle5" type="Node2D"]
-position = Vector2(1920, 0)
 
 [node name="Obstacle_5_scene" type="StaticBody2D" parent="."]
 script = ExtResource("1_0rq0n")
 
 [node name="obstacle_5-sprite" type="Sprite2D" parent="Obstacle_5_scene"]
-texture = ExtResource("2_5uhrs")
+texture = ExtResource("2_ryrku")
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacle_5_scene"]
-position = Vector2(960, 380)
+position = Vector2(960, 376)
 shape = SubResource("RectangleShape2D_2wfc7")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstacle_5_scene"]
-position = Vector2(960, 708)
+position = Vector2(959.5, 704)
 shape = SubResource("RectangleShape2D_3i1qq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstacle_5_scene"]
