@@ -85,42 +85,57 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("18_ojy5y")
-}, {
-"duration": 1.0,
 "texture": ExtResource("19_uh1t8")
 }],
 "loop": false,
+"name": &"Apressed",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_ojy5y")
+}],
+"loop": false,
 "name": &"pressA",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q6nb5"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("21_ic0s4")
-}, {
-"duration": 1.0,
 "texture": ExtResource("22_2wdwp")
 }],
-"loop": true,
+"loop": false,
+"name": &"Xpressed",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_ic0s4")
+}],
+"loop": false,
 "name": &"pressX",
-"speed": 3.0
+"speed": 1.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8544j"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("24_bri4p")
-}, {
-"duration": 1.0,
 "texture": ExtResource("25_c8f4k")
 }],
-"loop": true,
+"loop": false,
+"name": &"Bpressed",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_bri4p")
+}],
+"loop": false,
 "name": &"pressB",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [node name="sceneMenu" type="Node2D"]
@@ -129,7 +144,6 @@ animations = [{
 texture = ExtResource("1_086dq")
 centered = false
 script = ExtResource("1_ncd84")
-metadata/_edit_lock_ = true
 
 [node name="itre" type="Sprite2D" parent="."]
 z_index = 1
@@ -165,6 +179,7 @@ position = Vector2(776, 904)
 scale = Vector2(0.18, 0.18)
 sprite_frames = SubResource("SpriteFrames_d2bbk")
 animation = &"pressA"
+autoplay = "pressA"
 centered = false
 
 [node name="credit" type="Sprite2D" parent="."]
@@ -178,6 +193,7 @@ position = Vector2(96, 944)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_q6nb5")
 animation = &"pressX"
+autoplay = "pressX"
 centered = false
 
 [node name="quitter" type="Sprite2D" parent="."]
@@ -191,9 +207,12 @@ position = Vector2(1792, 944)
 scale = Vector2(0.12, 0.12)
 sprite_frames = SubResource("SpriteFrames_8544j")
 animation = &"pressB"
+autoplay = "pressB"
 centered = false
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.3
-
-[connection signal="timeout" from="Timer" to="bgNoir" method="_on_timer_timeout"]
+[node name="pressA" type="AnimatedSprite2D" parent="pressB"]
+position = Vector2(776, 904)
+scale = Vector2(0.18, 0.18)
+sprite_frames = SubResource("SpriteFrames_d2bbk")
+animation = &"pressA"
+centered = false

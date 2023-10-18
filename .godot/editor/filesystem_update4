@@ -8,4 +8,12 @@ res://obstacle_2.tscn
 res://obstacle_3.tscn
 res://obstacle_4.tscn
 res://obstacle_5.tscn
-res://pont_1.gd
+res://main.gd
+res://pont.gd
+res://Fond4-2.gd
+res://CharacterBody2D.gd
+res://Fond2-1.gd
+res://Fond2-2.gd
+res://AnimatedSprite2D.gd
+res://sceneCredit.gd
+res://sceneMenu.gd

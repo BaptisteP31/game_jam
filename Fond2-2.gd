@@ -15,4 +15,3 @@ func _process(delta):
 	if position.x <= - (sprite_size):
 		# Réinitialise la position du sprite à la limite droite de l'écran
 		position.x = sprite_size
-		print("Fin de fond")

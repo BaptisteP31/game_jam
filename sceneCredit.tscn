@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c583138ff7wai" path="res://menuAnim/Anim_menu_3.png" id="6_s6ued"]
 [ext_resource type="Texture2D" uid="uid://bgy241nkh4gg1" path="res://menuAnim/Anim_menu_4.png" id="7_c6int"]
 [ext_resource type="Script" path="res://AnimatedSprite2D.gd" id="7_glfr6"]
-[ext_resource type="Texture2D" uid="uid://bo6jsif611ldk" path="res://fondFF/credit 4.png" id="8_ry3hl"]
+[ext_resource type="Texture2D" uid="uid://ctmh7m833hevv" path="res://Credits_final.png" id="8_0evns"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_msh2l"]
 animations = [{
@@ -32,14 +32,13 @@ animations = [{
 [node name="sceneCredit" type="Node2D"]
 
 [node name="bg" type="Sprite2D" parent="."]
-visible = false
 texture = ExtResource("1_w5a30")
 centered = false
 script = ExtResource("1_qvr3x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(504, -136)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_msh2l")
 autoplay = "default"
 frame_progress = 0.47454
@@ -48,4 +47,7 @@ script = ExtResource("7_glfr6")
 
 [node name="credit" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("8_ry3hl")
+texture = ExtResource("8_0evns")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
