@@ -48,5 +48,4 @@ script = ExtResource("7_glfr6")
 
 [node name="credit" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-scale = Vector2(1, 1)
 texture = ExtResource("8_ry3hl")

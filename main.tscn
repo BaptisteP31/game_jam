@@ -451,7 +451,7 @@ script = ExtResource("12_ckjjf")
 script = ExtResource("69_35v7m")
 
 [node name="Timer" type="Timer" parent="pont"]
-wait_time = 6.3
+wait_time = 6.0
 autostart = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="pont"]
@@ -471,7 +471,6 @@ shape = SubResource("RectangleShape2D_eljnx")
 
 [node name="Sprite2D2" type="Sprite2D" parent="pont/StaticBody2D"]
 position = Vector2(2880, 540)
-scale = Vector2(1, 1)
 texture = ExtResource("20_40urc")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="pont/StaticBody2D"]
