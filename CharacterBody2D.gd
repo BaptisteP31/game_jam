@@ -59,7 +59,7 @@ func _physics_process(delta):
 		death()
 
 	if Global.isPicking:
-		Global.health += 15
+		Global.health += 10
 		Global.isPicking = false
 		Global.currentFeu -= 1
 		var bruitAspiration = get_node("SFX_aspiration")
